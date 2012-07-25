@@ -17,7 +17,7 @@ module OmniAuth
         }
         google_contacts_auth = 'www.google.com/m8/feeds'
         options[:scope] ||= "https://#{google_contacts_auth}"
-        options[:scope] << " https://#{google_contacts_auth}" unless options[:scope] =~ %r[http[s]?:\/\/#{google_contacts_auth}]
+        #options[:scope] << " https://#{google_contacts_auth}" unless options[:scope] =~ %r[http[s]?:\/\/#{google_contacts_auth}]
         options[:client_options] = client_options
 
         super(app, consumer_key, consumer_secret, options, &block)
